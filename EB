@@ -1,0 +1,65 @@
+--This version checks if the inventory is full after every block it mines
+while true do
+local readyTurn = true
+local full = false
+
+ for i = 1,47 do
+     for i = 1,47 do
+         turtle.dig()
+         turtle.forward()
+  --start of inventory check
+      turtle.select(16)
+  if turtle.getItemCount() == 0 then
+          full = false
+      else
+      if turtle.getItemCount() ~= 0 then
+          full = true
+      end
+  end
+  turtle.select(3)
+
+if full then
+  turtle.select(2) 
+  turtle.place()
+ for i = 2,16 do 
+     turtle.select(i)
+     if turtle.getSelectedSlot() ~= 0 then
+     turtle.drop()
+     end
+ full = false
+ end
+ turtle.select(2)
+ turtle.dig()
+ turtle.select(3)
+end
+--end of inventory check
+end
+--start of refuel
+    if turtle.getFuelLevel() <= 100 then
+     turtle.dig()
+     turtle.select(1)
+     turtle.place()
+     turtle.suck()
+     turtle.refuel()
+     turtle.dig()
+    end
+--end of refuel
+
+     if readyTurn == true then
+         turtle.turnRight()
+         turtle.dig()
+         turtle.forward()
+         turtle.turnRight()
+         readyTurn = false
+     else
+         turtle.turnLeft()
+         turtle.dig()
+         turtle.forward()
+         turtle.turnLeft()
+         readyTurn = true 
+     end
+  end
+
+ turtle.digDown()
+ turtle.down()
+end
