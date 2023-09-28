@@ -33,10 +33,13 @@ for i = 1,16 do
         turtle.refuel()
         turtle.dig()
         turtle.select(3)
-        print("fuel level is: ",turtle.getFuelLevel())
+        print("Fuel level is: ",turtle.getFuelLevel())
     end
 --end of refuel
     for i = 1,15 do
+        if data.name == "minecraft:bedrock" then
+            error("Hit bedrock...stopping the program")
+        end
         turtle.dig()
         turtle.forward()
     end
@@ -64,10 +67,6 @@ end
     else
         turtle.turnRight()
         rightTurn = true
-    end
---check for bedrock
-    if data.name == "minecraft:bedrock" then
-    error("Hit bedrock...stopping the program")
     end
     print("its still running")
 end
