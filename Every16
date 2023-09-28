@@ -67,7 +67,7 @@ end
     end
 --check for bedrock
     if data.name == "minecraft:bedrock" then
-    printError("Hit bedrock...stopping the program")
+    error("Hit bedrock...stopping the program")
     end
     print("its still running")
 end
