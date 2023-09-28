@@ -3,7 +3,7 @@ while true do
 local readyTurn = true
 local full = false
 
-for i = 1,15 do
+for i = 1,16 do
 
 --start of inventory check
     turtle.select(13)
