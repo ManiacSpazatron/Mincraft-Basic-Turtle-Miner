@@ -1,11 +1,12 @@
 --This version checks if the inventory is full every 16 blocks
 while true do
+local has_block, data = turtle.inspect()
 local rightTurn = true
 
 for i = 1,16 do
 
 --start of inventory check
-    turtle.select(13)
+    turtle.select(12)
     if turtle.getItemCount() == 0 then
         turtle.select(3)
     else
@@ -18,7 +19,8 @@ for i = 1,16 do
             if turtle.getSelectedSlot() ~= 0 then
                 turtle.drop()
             end
-        end   
+        end
+    turtle.select(2)
     end
     end
 --end of inventory check
@@ -30,6 +32,8 @@ for i = 1,16 do
         turtle.suck()
         turtle.refuel()
         turtle.dig()
+        turtle.select(3)
+        print("fuel level is: ",turtle.getFuelLevel())
     end
 --end of refuel
     for i = 1,15 do
@@ -61,4 +65,9 @@ end
         turtle.turnRight()
         rightTurn = true
     end
+--check for bedrock
+    if data.name == "minecraft:bedrock" then
+    printError("Hit bedrock...stopping the program")
+    end
+    print("its still running")
 end
