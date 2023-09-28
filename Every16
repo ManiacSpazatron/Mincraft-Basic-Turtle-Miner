@@ -6,13 +6,13 @@ for i = 1,16 do
 
 --start of inventory check
     turtle.select(13)
-if turtle.getItemCount() == 0 then
-    turtle.select(3)
-else
+    if turtle.getItemCount() == 0 then
+        turtle.select(3)
+    else
     if turtle.getItemCount() ~= 0 then
-            turtle.dig()
-            turtle.select(2)
-            turtle.place()
+        turtle.dig()
+        turtle.select(2)
+        turtle.place()
         for i = 2,16 do 
             turtle.select(i)
             if turtle.getSelectedSlot() ~= 0 then
@@ -20,7 +20,7 @@ else
             end
         end   
     end
-end
+    end
 --end of inventory check
 --start of refuel
     if turtle.getFuelLevel() <= 100 then
@@ -60,5 +60,4 @@ end
         turtle.turnLeft()
         rightTurn = true
     end
-end
 end
