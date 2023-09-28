@@ -1,7 +1,6 @@
 --This version checks if the inventory is full every 16 blocks
 while true do
 local readyTurn = true
-local full = false
 
 for i = 1,16 do
 
