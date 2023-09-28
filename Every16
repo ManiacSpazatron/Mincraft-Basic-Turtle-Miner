@@ -50,12 +50,14 @@ end
         rightTurn = true 
     end
 end
-turtle.digDown()
-turtle.down()
-if rightTurn == true then
-    turtle.turnRight()
-    rightTurn = false
-else
-    turtle.turnLeft()
-    rightTurn = true
+--go to the next layer down
+    turtle.digDown()
+    turtle.down()
+    if rightTurn == true then
+        turtle.turnRight()
+        rightTurn = false
+    else
+        turtle.turnLeft()
+        rightTurn = true
+    end
 end
