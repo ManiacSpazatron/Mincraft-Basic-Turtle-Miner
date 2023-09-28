@@ -1,6 +1,6 @@
 --This version checks if the inventory is full every 16 blocks
 while true do
-local readyTurn = true
+local rightTurn = true
 
 for i = 1,16 do
 
@@ -36,20 +36,26 @@ end
         turtle.dig()
         turtle.forward()
     end
-    if readyTurn == true then
+    if rightTurn == true then
         turtle.turnRight()
         turtle.dig()
         turtle.forward()
         turtle.turnRight()
-        readyTurn = false
+        rightTurn = false
     else
         turtle.turnLeft()
         turtle.dig()
         turtle.forward()
         turtle.turnLeft()
-        readyTurn = true 
+        rightTurn = true 
     end
 end
-    turtle.digDown()
-    turtle.down()
+turtle.digDown()
+turtle.down()
+if rightTurn == true then
+    turtle.turnRight()
+    rightTurn = false
+else
+    turtle.turnLeft()
+    rightTurn = true
 end
