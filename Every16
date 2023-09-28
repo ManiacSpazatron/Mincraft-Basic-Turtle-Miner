@@ -36,28 +36,29 @@ for i = 1,16 do
         turtle.dig()
         turtle.forward()
     end
-    if rightTurn == true then
+    if rightTurn == true && i != 16 then
         turtle.turnRight()
         turtle.dig()
         turtle.forward()
         turtle.turnRight()
         rightTurn = false
-    else
+    else if rightTurn == false && i != 16 then
         turtle.turnLeft()
         turtle.dig()
         turtle.forward()
         turtle.turnLeft()
-        rightTurn = true 
+        rightTurn = true
+    end
     end
 end
 --go to the next layer down
     turtle.digDown()
     turtle.down()
     if rightTurn == true then
-        turtle.turnRight()
+        turtle.turnLeft()
         rightTurn = false
     else
-        turtle.turnLeft()
+        turtle.turnRight()
         rightTurn = true
     end
 end
