@@ -1,6 +1,7 @@
 --This version checks if the inventory is full every 16 blocks
 local chunkCount = 1
 while true do
+local blockDetected = turtle.inspect()
 local has_block, data = turtle.inspect()
 local rightTurn = true
 
@@ -38,9 +39,12 @@ for i = 1,16 do
     end
 --end of refuel
     for i = 1,15 do
-        while ((not (data)) and (not (turtle.forward()))) do
+        function mobDefense ()
+            if not blockDetected and not turtle.forward() then
             print("Mob detected in front. Attacking mob")
             turtle.attack()
+            mobDefense()
+            end
         end
         if data.name == "minecraft:bedrock" then
             error("Hit bedrock...stopping the program")
