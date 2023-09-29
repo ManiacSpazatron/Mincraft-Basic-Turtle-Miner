@@ -73,5 +73,5 @@ end
         turtle.turnRight()
         rightTurn = true
     end
-    print("its still running...chunks done: " chunker)
+    print("its still running...chunks done: ",chunker)
 end
