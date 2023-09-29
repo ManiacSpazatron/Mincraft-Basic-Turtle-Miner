@@ -1,5 +1,5 @@
 --This version checks if the inventory is full every 16 blocks
-local chunker = 1
+local chunkCount = 1
 while true do
 local has_block, data = turtle.inspect()
 local rightTurn = true
@@ -73,5 +73,6 @@ end
         turtle.turnRight()
         rightTurn = true
     end
-    print("its still running...chunks done: ",chunker)
+    print(chunkCount)
+    print("its still running...chunks done: ",chunkCount)
 end
