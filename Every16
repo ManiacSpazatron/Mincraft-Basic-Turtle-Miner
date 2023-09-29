@@ -38,7 +38,7 @@ for i = 1,16 do
     end
 --end of refuel
     for i = 1,15 do
-        for not data and not turtle.forward() then
+        while not data and not turtle.forward() then
             print("Mob detected in front. Attacking mob")
             turtle.attack()
         end
