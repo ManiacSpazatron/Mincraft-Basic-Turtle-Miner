@@ -86,7 +86,6 @@ for i = 1,16 do
         sleep(0.2)
         mobDefense()
         turtle.forward()
-        sleep(0.2)
         mobDefense()
     end
     if (rightTurn == true and (not (i == 16))) then
