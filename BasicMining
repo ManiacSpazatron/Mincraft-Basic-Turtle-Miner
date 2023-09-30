@@ -27,7 +27,7 @@ local function mobDefense ()
     print("Mob detected in front. Attacking mob")
     turtle.attack()
     turtle.attackUp()
-    sleep(2)
+    sleep(2.5)
     mobDefense()
     end
 canSuck()
