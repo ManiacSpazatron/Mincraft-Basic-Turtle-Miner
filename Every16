@@ -16,6 +16,8 @@ function mobDefense ()
     sleep(2)
     mobDefense()
     end
+suck()
+suckUp()
 end
 
 for i = 1,16 do
@@ -57,6 +59,7 @@ for i = 1,16 do
             error("Hit bedrock...stopping the program")
         end
         turtle.dig()
+        sleep(0.1)
         turtle.forward()
     end
     if (rightTurn == true and (not (i == 16))) then
@@ -84,6 +87,5 @@ end
         turtle.turnRight()
         rightTurn = true
     end
-    print(chunkCount)
     print("its still running...chunks done: ",chunkCount)
 end
