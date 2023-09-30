@@ -4,6 +4,13 @@ Noteworthy Considerations
 
 ![setup](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/5f8a5aca-d1bd-4a35-9a47-9a00dba4c76f)
 
+Features:
+1. Mines 1 whole chunk (16x16 blocks)(hit F3 + g to see chunk borders) then has to be manually reset
+2. Checks if the turtle has enough fuel and if the inventory is full every 16 blocks
+3. Basic mob detection/defense
+4. Basic item auto suck
+5. Mining stops when it hits bedrock
+
 For these scripts to work you need...
 1. Have 2 different kinds of colored ender chests (like the ones from Ender Storage)
 2. Fuel for the turtle in an enderchest (coal/coal blocks/blaze rods)
