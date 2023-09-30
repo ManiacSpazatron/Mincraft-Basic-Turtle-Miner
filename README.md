@@ -1,6 +1,6 @@
-Noteworthy Considerations
-Guaranteed to work on Minecraft 1.12.2 CC:Tweaked CraftOS 1.8
-This turtle mining script is best used with Ender Storage and preferably a storage system that is able to pull items from a ender chest (like Refined Storage or Applied Energistics)
+Noteworthy Considerations 
+1. Guaranteed to work on Minecraft 1.12.2 CC:Tweaked CraftOS 1.8
+2. This turtle mining script is best used with Ender Storage and preferably a storage system that is able to pull items from a ender chest (like Refined Storage or Applied Energistics)
 
 ![setup](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/5f8a5aca-d1bd-4a35-9a47-9a00dba4c76f)
 
