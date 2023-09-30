@@ -1,6 +1,6 @@
 --This version checks if the inventory is full every 16 blocks
 
-local chunkCount = 1
+local chunkCount = 0
 
 while true do
 
@@ -72,6 +72,7 @@ for i = 1,16 do
         end
         turtle.dig()
         sleep(0.1)
+        mobDefense()
         turtle.forward()
     end
     if (rightTurn == true and (not (i == 16))) then
@@ -99,5 +100,6 @@ end
         turtle.turnRight()
         rightTurn = true
     end
+    chunkCount = chunkCount + 1
     print("its still running...chunks done: ",chunkCount)
 end
