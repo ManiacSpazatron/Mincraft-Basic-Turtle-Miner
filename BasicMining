@@ -77,6 +77,9 @@ for i = 1,16 do
         turtle.dig()
         turtle.select(3)
         print("Fuel level is: ",turtle.getFuelLevel())
+        if turtle.getFuelLevel() == 0 then
+            error("Ran out of fuel...stopping the program")
+        end
     end
 --end of refuel
     for i = 1,15 do
