@@ -28,7 +28,7 @@ local function mobDefense ()
     turtle.attack()
     turtle.attackUp()
     turtle.attackDown()
-    sleep(2)
+    sleep(3)
     mobDefense()
     end
 canSuck()
