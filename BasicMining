@@ -74,7 +74,7 @@ for i = 1,16 do
             error("Hit bedrock...stopping the program")
         end
         turtle.dig()
-        turtle.sleep(0.1)
+        sleep(0.1)
         mobDefense()
         turtle.forward()
     end
