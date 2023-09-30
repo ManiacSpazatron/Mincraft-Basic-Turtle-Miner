@@ -5,12 +5,16 @@ local chunkCount = 0
 
 while true do
 
-local blockDetected = turtle.inspect()
+local has_block, data = turtle.inspect()
+local has_blockbottom, datab = turtle.inspectDown()
 local rightTurn = true
 
 local function bedrockDetected()
-    if blockDetected.name == "minecraft:bedrock" then
+    if has_block.name == "minecraft:bedrock" then
             error("Hit bedrock...stopping the program")
+    else if has_blockbottom.name == "minecraft:bedrock" then
+            error("Hit bedrock...stopping the program")
+         end
     end
 end
 local function canSuck ()
@@ -28,7 +32,7 @@ local function canSuck ()
     end
 end
 local function mobDefense ()
-    if not blockDetected and turtle.attack() or turtle.attackUp() or turtle.attackDown() then
+    if not has_block and turtle.attack() or turtle.attackUp() or turtle.attackDown() then
     print("Mob detected in front. Attacking mob")
     turtle.attack()
     turtle.attackUp()
