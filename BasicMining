@@ -23,11 +23,12 @@ local function canSuck ()
     end
 end
 local function mobDefense ()
-    if not blockDetected and turtle.attack() or turtle.attackUp() then
+    if not blockDetected and turtle.attack() or turtle.attackUp() or turtle.attackDown() then
     print("Mob detected in front. Attacking mob")
     turtle.attack()
     turtle.attackUp()
-    sleep(2.5)
+    turtle.attackdown()
+    sleep(2)
     mobDefense()
     end
 canSuck()
@@ -59,6 +60,7 @@ for i = 1,16 do
 --start of refuel
     if turtle.getFuelLevel() <= 100 then
         turtle.dig()
+        mobDefense()
         turtle.select(1)
         turtle.place()
         turtle.suck()
@@ -81,12 +83,14 @@ for i = 1,16 do
     if (rightTurn == true and (not (i == 16))) then
         turtle.turnRight()
         turtle.dig()
+        mobDefense()
         turtle.forward()
         turtle.turnRight()
         rightTurn = false
     else if (rightTurn == false and (not (i == 16))) then
         turtle.turnLeft()
         turtle.dig()
+        mobDefense()
         turtle.forward()
         turtle.turnLeft()
         rightTurn = true
@@ -95,6 +99,7 @@ for i = 1,16 do
 end
 --go to the next layer down
     turtle.digDown()
+    mobDefense()
     turtle.down()
     if rightTurn == true then
         turtle.turnLeft()
