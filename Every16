@@ -35,21 +35,23 @@ end
 for i = 1,16 do
 
 --start of inventory check
-    turtle.select(12)
+    turtle.select(10)
     if turtle.getItemCount() == 0 then
         turtle.select(3)
-    else
-    if turtle.getItemCount() ~= 0 then
+    else if turtle.getItemCount() ~= 0 then
         turtle.dig()
+        mobDefense()
         turtle.select(2)
         turtle.place()
-        for i = 2,16 do 
-            turtle.select(i)
-            if turtle.getSelectedSlot() ~= 0 then
-                turtle.drop()
+            for i = 2,16 do 
+                turtle.select(i)
+                if turtle.getSelectedSlot() ~= 0 then
+                    turtle.drop()
+                end
             end
-        end
     turtle.select(2)
+    turtle.dig()
+    turtle.select(3)
     end
     end
 --end of inventory check
