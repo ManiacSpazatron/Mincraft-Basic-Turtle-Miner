@@ -23,7 +23,7 @@ For these scripts to work you need...
 ![image](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/d6a670c6-5174-4daf-8f97-9d1d3feb1359)
 ![image](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/9e99804e-361c-436b-8c50-b0e1a17f6334)
 
-6. Go to my BasicMining page and click on "Raw"
+6. Go to my BasicMining code and click on "Raw"
 
 ![image](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/26dd8adc-ecd9-40cc-856d-1c1ef21d9823)
 
