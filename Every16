@@ -14,6 +14,10 @@ local function canSuck ()
     else if turtle.suckUp() == true then
     turtle.suckUp()
     canSuck()
+    else if turtle.suckDown() == true then
+    turtle.suckDown()
+    canSuck()
+    end
     end
     end
 end
@@ -25,7 +29,7 @@ local function mobDefense ()
     sleep(2)
     mobDefense()
     end
-
+canSuck()
 end
 
 for i = 1,16 do
