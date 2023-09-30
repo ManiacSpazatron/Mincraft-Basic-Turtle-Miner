@@ -76,10 +76,10 @@ for i = 1,16 do
             error("Hit bedrock...stopping the program")
         end
         turtle.dig()
-        sleep(0.1)
+        sleep(0.2)
         mobDefense()
         turtle.forward()
-        sleep(0.1)
+        sleep(0.2)
         mobDefense()
     end
     if (rightTurn == true and (not (i == 16))) then
