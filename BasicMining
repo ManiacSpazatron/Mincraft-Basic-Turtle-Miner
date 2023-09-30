@@ -1,4 +1,5 @@
---This version checks if the inventory is full every 16 blocks
+--This version checks if the turtle has enough fuel and if the inventory is full every 16 blocks
+--Bonus features include: basic mob detection and defense/basic item auto suck/program stops when it hits bedrock
 
 local chunkCount = 0
 
