@@ -102,6 +102,7 @@ end
     turtle.digDown()
     mobDefense()
     turtle.down()
+    mobDefense()
     if rightTurn == true then
         turtle.turnLeft()
         rightTurn = false
