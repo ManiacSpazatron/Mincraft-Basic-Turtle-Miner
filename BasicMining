@@ -5,14 +5,14 @@ local chunkCount = 0
 
 while true do
 
-local has_block, data = turtle.inspect()
-local has_blockbottom, datab = turtle.inspectDown()
+local data = turtle.inspect()
+local dataBottom = turtle.inspectDown()
 local rightTurn = true
 
 local function bedrockDetected()
-    if has_block.name == "minecraft:bedrock" then
+    if data.name == "minecraft:bedrock" then
             error("Hit bedrock...stopping the program")
-    else if has_blockbottom.name == "minecraft:bedrock" then
+    else if dataBottom.name == "minecraft:bedrock" then
             error("Hit bedrock...stopping the program")
          end
     end
