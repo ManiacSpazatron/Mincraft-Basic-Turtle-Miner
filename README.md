@@ -25,4 +25,4 @@ For these scripts to work you need...
 
 6. Type: wget https://raw.githubusercontent.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/main/BasicMining
 7. Type: BasicMining  (or whatever the name of the script is)
-8. Your program should be running!
+8. Your turtle should be mining!
