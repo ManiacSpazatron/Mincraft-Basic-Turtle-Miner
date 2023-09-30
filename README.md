@@ -10,5 +10,12 @@ For these scripts to work you need...
 3. The ender chest containing the fuel must be in the turtle's first item slot
 4. The ender chest for offloading items has to be in the turtle's second item slot
 ![image](https://github.com/ManiacSpazatron/Mincraft-Turtle-Miner/assets/103073028/2a85cdab-c7ee-4cc9-a75a-2cad84f41646)
-5. Type the name of the script
-6. Your program should be running!
+
+5. Make sure you have edited the computercraft config file to allow http
+
+![image](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/d6a670c6-5174-4daf-8f97-9d1d3feb1359)
+![image](https://github.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/assets/103073028/9e99804e-361c-436b-8c50-b0e1a17f6334)
+
+6. Type: wget https://raw.githubusercontent.com/ManiacSpazatron/Mincraft-Basic-Turtle-Miner/main/BasicMining
+7. Type: BasicMining  (or whatever the name of the script is)
+8. Your program should be running!
