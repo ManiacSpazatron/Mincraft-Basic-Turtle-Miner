@@ -10,9 +10,9 @@ local hasBlockBottom, dataBottom = turtle.inspectDown()
 local rightTurn = true
 
 local function bedrockDetected()
-    if hasBlock == true and data.name == "minecraft:bedrock" then
+    if data.name == "minecraft:bedrock" then
             error("Hit bedrock...stopping the program")
-    else if hasBlockBottom == true and dataBottom.name == "minecraft:bedrock" then
+    else if dataBottom.name == "minecraft:bedrock" then
             error("Hit bedrock...stopping the program")
          end
     end
