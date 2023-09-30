@@ -16,8 +16,8 @@ function mobDefense ()
     sleep(2)
     mobDefense()
     end
-suck()
-suckUp()
+turtle.suck()
+turtle.suckUp()
 end
 
 for i = 1,16 do
