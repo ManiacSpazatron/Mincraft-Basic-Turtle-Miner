@@ -32,9 +32,8 @@ local function canSuck ()
     end
 end
 local function mobDefense ()
-    local hasBlock, data = turtle.inspect()
-    if not hasBlock and turtle.attack() or turtle.attackUp() or turtle.attackDown() then
-    print("Mob detected in front. Attacking mob")
+    if turtle.attack() or turtle.attackUp() or turtle.attackDown() then
+    print("Mob detected. Attacking mob")
     turtle.attack()
     turtle.attackUp()
     turtle.attackDown()
