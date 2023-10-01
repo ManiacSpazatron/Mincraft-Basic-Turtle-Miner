@@ -10,14 +10,14 @@ local hasBlockBottom, dataBottom = turtle.inspectDown()
 local rightTurn = true
 
 local function bedrockDetected()
-    print("IS THIS RUNNGG")
+    print("bruh")
     if data.name == "minecraft:bedrock" then
-            error("Hit bedrock...stopping the program")
-    else if dataBottom.name == "minecraft:bedrock" then
-            error("Hit bedrock...stopping the program")
-         end
+        error("Hit bedrock...stopping the program")
     end
-    print("STILLLLL")
+    if dataBottom.name == "minecraft:bedrock" then
+        error("Hit bedrock...stopping the program")
+    end
+    print("moment")
 end
 local function canSuck ()
     if turtle.suck() == true then
