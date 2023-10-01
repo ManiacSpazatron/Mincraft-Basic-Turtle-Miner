@@ -12,7 +12,9 @@ local rightTurn = true
 local function bedrockDetected()
     print("bruh")
     if data.name == "minecraft:bedrock" then
+        print("start of error")
         error("Hit bedrock...stopping the program")
+        print("end of error")
     end
     if dataBottom.name == "minecraft:bedrock" then
         error("Hit bedrock...stopping the program")
