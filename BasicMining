@@ -1,7 +1,7 @@
 --This version checks if the turtle has enough fuel and if the inventory is full every 16 blocks
 --Bonus features include: basic mob detection and defense/basic item auto suck/program stops when it hits bedrock
 
-local chunkCount = 0
+local layerCount = 0
 
 while true do
 
@@ -129,6 +129,6 @@ end
         rightTurn = true
     end
     bedrockDetected()
-    chunkCount = chunkCount + 1
-    print("its still running...chunks done: ",chunkCount)
+    layerCount = layerCount + 1
+    print("its still running...layers done: ",layerCount)
 end
