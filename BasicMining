@@ -2,11 +2,11 @@
 --Bonus features include: basic mob detection and defense/basic item auto suck/program stops when it hits bedrock
 
 local chunkCount = 0
+local hasBlock, data = turtle.inspect()
+local hasBlockBottom, dataBottom = turtle.inspectDown()
 
 while true do
 
-local hasBlock, data = turtle.inspect()
-local hasBlockBottom, dataBottom = turtle.inspectDown()
 local rightTurn = true
 
 local function bedrockDetected()
