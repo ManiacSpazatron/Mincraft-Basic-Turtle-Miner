@@ -9,12 +9,14 @@ local rightTurn = true
 
 local function bedrockDetected()
     local hasBlock, data = turtle.inspect()
-    local hasBlockBottom, dataBottom = turtle.inspectDown()
     if data.name == "minecraft:bedrock" then
-        error("Hit bedrock...stopping the program")
+        error("Hit bedrock in front...stopping the program")
     end
+end
+local function bedrockDetectedDown()
+    local hasBlockBottom, dataBottom = turtle.inspectDown()
     if dataBottom.name == "minecraft:bedrock" then
-        error("Hit bedrock...stopping the program")
+        error("Hit bedrock below...stopping the program")
     end
 end
 local function canSuck ()
@@ -114,7 +116,7 @@ bedrockDetected()
     end
 end
 --go to the next layer down
-    bedrockDetected()
+    bedrockDetectedDown()
     turtle.digDown()
     mobDefense()
     turtle.down()
