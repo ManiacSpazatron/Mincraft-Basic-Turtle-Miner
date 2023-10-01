@@ -34,3 +34,7 @@ For these scripts to work you need...
 8. Go back to your mining turtle and type "wget" then paste the URL after that and hit Enter 
 9. Type: BasicMining  (or whatever the name of the script is)
 10. Your turtle should be mining!
+
+Disclaimers
+1. PLayers can prevent turtle's movement by standing in front of it causing it to be misaligned when mining a whole chunk
+2. On very rare occasion a mob can prevent the turtle's movement by briefly walking in front of it at just the right time
