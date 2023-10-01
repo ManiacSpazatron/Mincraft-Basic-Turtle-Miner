@@ -10,16 +10,12 @@ local hasBlockBottom, dataBottom = turtle.inspectDown()
 local rightTurn = true
 
 local function bedrockDetected()
-    print("bruh")
     if data.name == "minecraft:bedrock" then
-        print("start of error")
         error("Hit bedrock...stopping the program")
-        print("end of error")
     end
     if dataBottom.name == "minecraft:bedrock" then
         error("Hit bedrock...stopping the program")
     end
-    print("moment")
 end
 local function canSuck ()
     if turtle.suck() == true then
@@ -41,7 +37,7 @@ local function mobDefense ()
     turtle.attack()
     turtle.attackUp()
     turtle.attackDown()
-    sleep(3)
+    sleep(2.5)
     mobDefense()
     end
 canSuck()
@@ -72,6 +68,7 @@ bedrockDetected()
 --end of inventory check
 --start of refuel
     if turtle.getFuelLevel() <= 100 then
+        local hasBlock, data = turtle.inspect()
         bedrockDetected()
         turtle.dig()
         mobDefense()
@@ -88,6 +85,7 @@ bedrockDetected()
     end
 --end of refuel
     for i = 1,15 do
+        local hasBlock, data = turtle.inspect()
         bedrockDetected()
         mobDefense()
         turtle.dig()
@@ -98,11 +96,13 @@ bedrockDetected()
     end
     if (rightTurn == true and (not (i == 16))) then
         turtle.turnRight()
+        local hasBlock, data = turtle.inspect()
         bedrockDetected()
         turtle.dig()
         mobDefense()
         turtle.forward()
         turtle.turnRight()
+        local hasBlock, data = turtle.inspect()
         bedrockDetected()
         rightTurn = false
     else if (rightTurn == false and (not (i == 16))) then
@@ -118,6 +118,7 @@ bedrockDetected()
     end
 end
 --go to the next layer down
+    local hasBlockBottom, dataBottom = turtle.inspectDown()
     bedrockDetected()
     turtle.digDown()
     mobDefense()
@@ -130,6 +131,7 @@ end
         turtle.turnRight()
         rightTurn = true
     end
+    local hasBlock, data = turtle.inspect()
     bedrockDetected()
     chunkCount = chunkCount + 1
     print("its still running...chunks done: ",chunkCount)
