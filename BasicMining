@@ -19,21 +19,14 @@ local function bedrockDetectedDown()
         error("Hit bedrock below...stopping the program")
     end
 end
-local function canSuck ()
-    if turtle.suck() == true then
+local function canSuck()
+    if (turtle.suck() == true) or (turtle.suckUp() == true) or (turtle.suckDown() == true) then
     turtle.suck()
-    canSuck()
-    else if turtle.suckUp() == true then
     turtle.suckUp()
-    canSuck()
-    else if turtle.suckDown() == true then
     turtle.suckDown()
-    canSuck()
-    end
-    end
     end
 end
-local function mobDefense ()
+local function mobDefense()
     if turtle.attack() or turtle.attackUp() or turtle.attackDown() then
     print("Mob detected. Attacking mob")
     turtle.attack()
