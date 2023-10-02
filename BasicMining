@@ -19,12 +19,10 @@ local function bedrockDetectedDown()
         error("Hit bedrock below...stopping the program")
     end
 end
-local function canSuck()
-    if (turtle.suck() == true) or (turtle.suckUp() == true) or (turtle.suckDown() == true) then
+local function suckIt()
     turtle.suck()
     turtle.suckUp()
     turtle.suckDown()
-    end
 end
 local function mobDefense()
     if turtle.attack() or turtle.attackUp() or turtle.attackDown() then
@@ -35,7 +33,7 @@ local function mobDefense()
     sleep(2.5)
     mobDefense()
     end
-canSuck()
+suckIt()
 end
 
 for i = 1,16 do
