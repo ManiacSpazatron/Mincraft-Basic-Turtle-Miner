@@ -8,7 +8,7 @@ Features:
 1. Mines 1 whole chunk (16x16 blocks)(hit F3 + g to see chunk borders) then has to be manually reset
 2. Checks if the turtle has enough fuel and if the inventory is full every 16 blocks
 3. Basic mob detection/defense
-4. Basic item auto suck
+4. Basic item auto suck (sucks up items on the ground)
 5. Mining stops when it hits bedrock
 
 For these scripts to work you need...
