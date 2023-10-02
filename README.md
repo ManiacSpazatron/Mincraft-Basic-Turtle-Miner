@@ -37,4 +37,4 @@ For these scripts to work you need...
 
 Disclaimers
 1. Players can prevent turtle's movement by standing in front of it causing it to be misaligned when mining a whole chunk
-2. On very rare occasion a mob can prevent the turtle's movement by briefly walking in front of it at just the right time
+2. On very rare occasion a mob can prevent the turtle's movement by briefly walking in front of it at just the right time before getting attacked
