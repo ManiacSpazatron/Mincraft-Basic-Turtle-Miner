@@ -31,9 +31,9 @@ local function mobDefense()
     turtle.attackUp()
     turtle.attackDown()
     sleep(2.5)
+    suckIt()
     mobDefense()
     end
-suckIt()
 end
 
 for i = 1,16 do
